@@ -34,21 +34,16 @@ export default function App() {
     }
 
   return (
-      <>
-        <StatusBar barStyle={'light-content'}/>
-        <LinearGradient colors={[Colors.secondary500, Colors.primary500]}  style={styles.root}>
-            <ImageBackground
-                source={require('./assets/img/background.jpg')}
-                resizeMode={'cover'}
-                style={styles.root}
-                imageStyle={styles.backgroundImage}
-            >
-                <SafeAreaView style={styles.safeArea}>
-                    {screen}
-                </SafeAreaView>
-            </ImageBackground>
-        </LinearGradient>
-      </>
+      <LinearGradient colors={[Colors.secondary500, Colors.primary500]}  style={styles.root}>
+          <ImageBackground
+              source={require('./assets/img/background.jpg')}
+              resizeMode={'cover'}
+              style={styles.root}
+              imageStyle={styles.backgroundImage}
+          ><SafeAreaView style={styles.safeArea}>
+                {screen}
+          </SafeAreaView></ImageBackground>
+      </LinearGradient>
 
 );
 }
