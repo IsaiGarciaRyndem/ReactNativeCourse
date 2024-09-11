@@ -1,16 +1,17 @@
 export const GlobalStyles = {
     colors: {
-        primary50: '#e4d9fd',
-        primary100: '#c6affc',
-        primary200: '#a281f0',
-        primary400: '#5721d4',
-        primary500: '#3e04c3',
-        primary700: '#2d0689',
-        primary800: '#200364',
-        accent500: '#f7bc0c',
-        error50: '#fcc4e4',
-        error500: '#9b095c',
-        gray500: '#39324a',
-        gray700: '#221c30',
+        primary50: '#f2e9fc',   // Suave lavanda claro
+        primary100: '#d9c9f9',  // Lavanda suave
+        primary200: '#bba8f2',  // Lavanda pastel
+        primary400: '#8b6edc',  // Púrpura suave
+        primary500: '#6c51c9',  // Púrpura moderado
+        primary700: '#533a97',  // Violeta oscuro suave
+        primary800: '#3d2972',  // Violeta intenso pero no agresivo
+        accent500: '#f9d77e',   // Amarillo pastel suave
+        error50: '#fdd6e6',     // Rosa claro
+        error500: '#bf4573',    // Fucsia suave
+        gray500: '#645a77',     // Gris suave
+        gray700: '#4b4357',     // Gris oscuro suave
+
     },
 };
