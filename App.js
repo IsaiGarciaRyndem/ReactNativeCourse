@@ -5,6 +5,8 @@ import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignupScreen";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
+import AuthContextProvider, {AuthContext} from "./store/auth-context";
+import {useContext} from "react";
 
 const Stack = createNativeStackNavigator();
 
@@ -38,10 +40,14 @@ function AuthenticatedStack() {
 }
 
 function Navigation() {
-  return (
-      <NavigationContainer>
-        <AuthStack />
-      </NavigationContainer>
+    const authCtx = useContext(AuthContext);
+    return (
+      <AuthContextProvider>
+          <NavigationContainer>
+              {!authCtx.isAuthenticated && <AuthStack/>}
+              {authCtx.isAuthenticated && <AuthenticatedStack/>}
+          </NavigationContainer>
+      </AuthContextProvider>
   );
 }
 export default function App() {
